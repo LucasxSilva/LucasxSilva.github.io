@@ -20,15 +20,13 @@ body {
   width: 100%;
   top:0px;
   width: 100%;
-  background-color: #333;
   background:#be3144;
   top: 0px;
   z-index:1;
   overflow: hidden;
+  transition: all 1s ease-out;
+
 }
-
-
-
 
 
 .topbar a {
@@ -42,8 +40,10 @@ body {
 }
 
 .topbar a:hover {
-  background-color: #ddd;
+  background-color:#904747;
   color: black;
+  transition: all 0.2s ease-out;
+
 }
 
 .topbar .icon {
@@ -62,7 +62,15 @@ body {
     display: block;
   }
 
-  .topbar.responsive {position: fixed;width: 100%;top:0px;}
+  .topbar.responsive 
+  {
+    position: fixed;
+    width: 100%;
+    top:0px;
+    transition: all 1s ease-out;
+  }
+
+
   .topbar.responsive .icon 
   {
     position: absolute;
@@ -193,6 +201,7 @@ footer{
   background-image: linear-gradient(62deg, #3a3d40 0%, #34343b 100%);
   font-size: 25px;
   padding-bottom: 1%;
+  text-align:center
 }
 
 footer a{margin: 2%;}
