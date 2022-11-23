@@ -190,13 +190,27 @@
 
     </div>
 <script>
+
 function myFunction() {
-  var x = document.getElementById("mytopbar");
-  if (x.className === "topbar") {
-    x.className += " responsive";
-  } else {
-    x.className = "topbar";
-  }
+    var x = document.getElementById("mytopbar");
+    if (x.className === "topbar") {
+        x.className += " responsive";
+    } 
+    else {
+        x.className = "topbar";
+    }
+}
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() 
+{
+     currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("mytopbar").style.top = "0";
+    } else {
+        document.getElementById("mytopbar").style.top = "-35%";
+    }
+    prevScrollpos = currentScrollPos;
 }
 </script>
 
